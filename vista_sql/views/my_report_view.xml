@@ -4,13 +4,13 @@
         <field name="name">my.report.tree</field>
         <field name="model">my.report</field>
         <field name="arch" type="xml">
-            <graph string="Name" type="bar">
-                <field name="id" type="row" />
+            <tree string="Name Col" >
+<!--                <field name="id" type="row" />-->
                 <field name="name" type="row" />
-            </graph>
+                <field name="partner_name" type="row" />
+            </tree>
         </field>
     </record>
-
 
     <record id="action_my_report" model="ir.actions.act_window">
         <field name="name">Name</field>
