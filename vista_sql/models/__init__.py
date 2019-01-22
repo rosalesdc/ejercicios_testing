@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
-
-from . import models
+from . import CustomReport
+from . import project_milestone

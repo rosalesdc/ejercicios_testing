@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Ejecutar consulta",
+    'name': "Ejecutar consulta y mostrar en árbol",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Ejecutar consulta en Tree""",
 
     'description': """
-        Long description of module's purpose
+        Ejecutar consulta para visualizar en vista de árbol
     """,
 
     'author': "drc",
@@ -19,17 +18,23 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website',],
+    'depends': ['base','website','contacts','purchase'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
-        'demo/demo.xml',
+        #'views/views.xml',
+        'views/my_report_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
     ],
 }
+
+#Notes: 
+#Se instaló un paquete tools porque no se reconocía el nombre "pip3 install setuptools-odoo"
+#https://odoo-development.readthedocs.io/en/latest/dev/py/postgres-views.html
+#https://supportuae.wordpress.com/2017/09/10/creating-tree-view-report-using-sql-query/
+#https://sajjadhossain.com/2013/06/30/openerp-7-creating-report-using-sql-query
+#https://pypi.org/project/setuptools-odoo/
+#https://stackoverflow.com/questions/44797225/get-data-from-different-model-odoo-9
