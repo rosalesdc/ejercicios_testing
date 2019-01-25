@@ -5,13 +5,22 @@
             <div class="oe_structure">
                 <div class="container">
                     In Container
-                    <t t-foreach="teachers" t-as="teacher">
-                        <p>
-                            <a t-attf-href="/academy/{{ slug(teacher) }}">
-                                <t t-esc="teacher.name"/>
-                            </a>
-                        </p>
-                    </t>
+                    <table>
+                        <t t-foreach="teachers" t-as="teacher">
+                            <tr>
+                                <td>
+                                    <a t-attf-href="#">
+                                        <t t-esc="teacher.name"/>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a t-attf-href="#">
+                                        <t t-esc="teacher.email"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
                 </div>
             </div>
         </t>

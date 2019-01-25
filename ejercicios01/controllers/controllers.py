@@ -10,7 +10,7 @@ class Academy(http.Controller):
         
     @http.route('/academy/academy/', auth='public', website=True)
     def index(self, ** kw):
-        Teachers = http.request.env['ejercicios01.teachers'] #nombre del modelo
+        Teachers = http.request.env['res.partner'] #nombre del modelo
         return http.request.render('ejercicios01.indexa', {
                                    'teachers': Teachers.search([])
                                    })
