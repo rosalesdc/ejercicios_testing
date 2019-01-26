@@ -7,7 +7,6 @@ class CustomReport(models.Model):
     _name = "my.report"
     _description = "my report"
     _auto = False
-    
 
     name = fields.Char(string='Nombre', readonly=True)
     partner_name = fields.Char(string='Nombre Partner', readonly=True)

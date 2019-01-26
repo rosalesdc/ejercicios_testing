@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 from odoo import http
+from odoo import tools
+from odoo import models, fields, api
 
 class Academy(http.Controller):
+    #_name='academy'
 #    @http.route('/academy/academy/', auth='public')
 #    def index(self, **kw):#index nombre arbitrario de la función
 #        return http.request.render('ejercicios01.index', {#nombre del módulo e index es por la página default
@@ -10,6 +13,9 @@ class Academy(http.Controller):
         
     @http.route('/academy/academy/', auth='public', website=True)
     def index(self, ** kw):
+#        for result in self.env.cr.fetchall():
+#            print (result)
+            
         Teachers = http.request.env['res.partner'] #nombre del modelo
         return http.request.render('ejercicios01.indexa', {
                                    'teachers': Teachers.search([])
