@@ -1,26 +1,34 @@
 <odoo>
     <data>
         <template id="index">
-            <title>Academy</title>
-            <t t-foreach="teachers" t-as="teacher">
-                <p>
-                    <p>
-                        <t t-esc="teacher.id"/> 
-                        <t t-esc="teacher.name"/>
-                    </p>
-                </p>
-            </t>
-            <t t-foreach="teachers" t-as="teacher">
-                <table border ="1">
-                    <tr>
-                        <td>
-                            <t t-esc="teacher.id"/>
-                        </td> 
-                        <td>
-                            <t t-esc="teacher.name"/>
-                        </td>
-                    </tr>
-                </table>
+            <t t-call="website.layout">
+                <title>Academy</title>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <p>
+                                <p>
+                                    <t t-esc="teacher.id"/> 
+                                    <t t-esc="teacher.name"/>
+                                </p>
+                            </p>
+                        </t>
+                    </div>
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <table border ="1">
+                                <tr>
+                                    <td>
+                                        <t t-esc="teacher.id"/>
+                                    </td> 
+                                    <td>
+                                        <t t-esc="teacher.name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                    </div>
+                </div>
             </t>
         </template>
     </data>
