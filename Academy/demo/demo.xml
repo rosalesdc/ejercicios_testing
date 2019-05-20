@@ -1,0 +1,11 @@
+<odoo>
+    <record id="padilla" model="academy.teachers">
+        <field name="name">Beto Belez</field>
+    </record>
+    <record id="carroll" model="academy.teachers">
+        <field name="name">Gonzalo González</field>
+    </record>
+    <record id="vaughn" model="academy.teachers">
+        <field name="name">Lalo Landa</field>
+    </record>
+</odoo>

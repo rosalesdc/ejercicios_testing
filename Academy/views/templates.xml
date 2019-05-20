@@ -4,13 +4,21 @@
             <title>Academy</title>
             <t t-foreach="teachers" t-as="teacher">
                 <p>
-                    <t t-esc="teacher"/>
+                    <p>
+                        <t t-esc="teacher.id"/> 
+                        <t t-esc="teacher.name"/>
+                    </p>
                 </p>
             </t>
             <t t-foreach="teachers" t-as="teacher">
                 <table border ="1">
                     <tr>
-                        <td><t t-esc="teacher"/></td>
+                        <td>
+                            <t t-esc="teacher.id"/>
+                        </td> 
+                        <td>
+                            <t t-esc="teacher.name"/>
+                        </td>
                     </tr>
                 </table>
             </t>

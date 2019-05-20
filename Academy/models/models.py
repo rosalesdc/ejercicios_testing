@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-#class Teachers(models.Model):
-    #_name = 'ejercicios01.teachers'
+class Teachers(models.Model):
+    _name = 'academy.teachers'
 
-    #name = fields.Char()
+    name = fields.Char()
