@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+                <p>
+                    <t t-esc="teacher"/>
+                </p>
+            </t>
+            <t t-foreach="teachers" t-as="teacher">
+                <table border ="1">
+                    <tr>
+                        <td><t t-esc="teacher"/></td>
+                    </tr>
+                </table>
+            </t>
+        </template>
+    </data>
+</odoo>
