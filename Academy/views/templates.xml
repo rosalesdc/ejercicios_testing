@@ -31,5 +31,20 @@
                 </div>
             </t>
         </template>
+        <template id="biography">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure"/>
+                <div class="oe_structure">
+                    <div class="container">
+                        <p>
+                            <t t-esc="person.id"/> 
+                            <t t-esc="person.name"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
     </data>
 </odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="portal_contactos_web" name="Contactos Web Portal" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[@id='oe_structure_portal_my_home_2']" position="after">
+            <div style="margin-top: 50px;">
+                <h3>Your Contacts</h3>
+                    <t t-foreach="contacts" t-as="contact">
+                        <t t-if="contact['contact_count']" t-call="portal.portal_docs_entry">
+                            <t t-set="title">
+                                <t t-esc="contact['name']" />
+                                (<t t-esc="contact['correo']"/>)
+                            </t>
+                            <t t-set="url" t-value="contact['url']" />
+                            <t t-set="count" t-value="contact['contact_count']"/>
+                        </t>
+                    </t>
+                </div>
+        </xpath>
+    </template>
+</odoo>
